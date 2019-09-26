@@ -1,8 +1,9 @@
 .hero {
     width: 100%;
-    height: 480px;
+    height: 500px;
     background-size: cover;
-    background-image: url("https://via.placeholder.com/1280x600");
+    background-position: center;
+    background-image: url("images/Carpenter_Farm_Supply_Hero.png");
     display: flex;
     justify-content: center;
     align-items: center;
