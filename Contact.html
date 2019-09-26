@@ -40,7 +40,24 @@
 				<div class="gmap_canvas">
 					<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=1933%20morrisville%20carpenter%20rd&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 				</div>
-				<style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
+				<style>
+					.mapouter {
+						position:relative;
+						text-align:right;
+						width: 100%;
+						padding-top: 84%;
+					}
+
+					.gmap_canvas {
+						overflow:hidden;
+						background:none!important;
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+					}
+				</style>
 			</div>
 		</div>
 
