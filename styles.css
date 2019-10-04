@@ -54,6 +54,7 @@ h1 {
 /* Image Gallery Styles */
 div.gallery {
   border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 div.gallery:hover {
@@ -61,8 +62,10 @@ div.gallery:hover {
 }
 
 div.gallery img {
+  float:center;
   width: 100%;
   height: auto;
+  border-radius: 6px;
 }
 
 div.desc {
