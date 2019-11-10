@@ -30,23 +30,28 @@ h1 {
 }
 
 /* Social Media Buttons */
-.fa {
-  padding: 8px;
-  font-size: 15px;
-  text-align: center;
+.navbar-social .fa {
+  margin: 0 2px;
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   border-radius: 50%;
 }
-.fa:hover {
+
+.navbar-social .fa:hover {
     opacity: 0.8;
 }
 
-.fa-facebook {
+.navbar-social .fa-facebook {
   background: #3B5998;
   color: white;
 }
 
-.fa-instagram {
+.navbar-social .fa-instagram {
   background: #125688;
   color: white;
 }
