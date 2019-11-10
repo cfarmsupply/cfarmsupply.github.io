@@ -1,0 +1,104 @@
+-
+  title: 'Animal Feed'
+  items:
+    -
+      title: 'Purina Mills Pet Food'
+      subitems:
+        - 'Holistic Dog and Cat Varieties'
+    -
+      title: 'Fescue Hay'
+      subitems:
+        - 'Grown by Carpenter Farm Supply'
+    -
+      title: 'Horse Feed & Supplements'
+      subitems:
+        - 'Pelletized and Textured'
+    - 'Bird Feed'
+    - 'Deer Corn'
+    - 'Chicken Feed'
+-
+  title: Garden
+  items:
+    - 'Seasonal Transplants from Bonnie Plants'
+    - 'Large Variety of Seeds'
+    - 'Potting Soil'
+    - Fertilizers
+    - 'Gardening Tools'
+-
+  title: Lawncare
+  items:
+    - 'Will sharpen mower blades!'
+    - 'Variety of Grass Seeds (Large & Small Bags)'
+    - Fertlizers
+    - 'Weed & Feed'
+    - 'Ant Killer'
+    - 'Snake Away'
+    -
+      title: 'Watering Systems'
+      subitems:
+        - 'Hoses & Accessories'
+        - Sprinklers
+    -
+      title: 'Yard Tools'
+      subitems:
+        - 'Shovels & Rakes'
+        - Rakes
+-
+  title: 'Farm Supplies'
+  items:
+    - Fertilizers
+    - Lime
+    - Crop
+    - 'Tractor Tires, Parts, and Services'
+    - Gates
+-
+  title: 'Household Items'
+  items:
+    - 'Household Cleaner'
+    - 'Gorilla Tape Varieties'
+    - 'Frog Tape for Painters'
+    - 'LED & Flouresent Light Bulbs'
+    -
+      title: Electrical
+      subitems:
+        - 'Outlets & Receptacles'
+        - 'Light Switches'
+    - 'Extension Cords'
+    - 'Air Filters'
+    - 'Liquid Propane'
+    - Flashlights
+    - 'Master Locks'
+-
+  title: Hardware
+  items:
+    - 'Metric & Standard Options'
+    - 'Different Hardware Grades Available'
+    - 'Nuts, Bolts, & Washers'
+    - 'Variety of Screws & Nails'
+    - 'Door Handles, Hinges, and Stops'
+-
+  title: Tools
+  items:
+    - '1/4", 3/8", 1/2" Ratchets & Sockets'
+    - 'Various Wrenches and Wrench Sets'
+    - 'Phillips & Flat Head Screwdrivers'
+    - 'Hammers & Mallets'
+    - 'Vise Grips'
+    - 'Channel Locks'
+    - 'Hand Saws & Blade Replacements'
+    - 'Drill Bits'
+    - 'Tape Measure'
+-
+  title: 'Snacks & Drinks'
+  items:
+    - 'Old Fashioned Glass Coca-Cola, Diet Coke, and Sprite'
+    - 'Canned & Bottled Coca-Cola Products'
+    - 'Smart Water'
+    - 'Dasani Water'
+    - 'Monster Energy Drinks'
+    - 'Lance Snacks'
+    - 'Houston Peanuts'
+    - 'Raw Peanuts'
+    - Twinkies
+    - 'Oatmeal Creme Pies'
+    - 'Honey Buns'

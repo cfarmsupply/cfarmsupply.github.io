@@ -28,179 +28,58 @@ subtitle: Since 1885
 			</div>
 		</div>
 	</div>
+	
+	{% comment %}
+	Now, we're going to iterate over the data in the featured.yml file.
+	featured.yml is an array with items which have the structure of:
+		title: str
+		items: array
+	
+	Elements in the items array are expected to be a string, or have a structure of:
+		title: str
+		subitems: array<str>
+	{% endcomment %}
+	
+	{% for featured_item in site.data.featured %}
 
+	{% comment %}
+	Store a modulo'd value of the index so we know if we need to make a new row.
+	{% endcomment %}
+	{% assign row = forloop.index0 |modulo: 3 %}
 
-	<div class="row">
-		<div class="col-lg" style="padding-bottom:30px;">
+	{% comment %}
+	If row is 0, make a new row.
+	{% endcomment %}
+	{% if row == 0 %}<div class="row" style="margin: 30px 0;">{% endif %}
+		<div class="col-lg">
 			<div class="card h-100" style="padding-bottom:30px;">
 				<div class="card-body">
-					<h4 style="color:darkgreen">Animal Feed</h4>
-
-					<ul style="list-style-type:none;padding-left:0;">
-						<li> - Purina Mills Pet Food
-							<ul style="list-style-type:none;">
-								<li> - Holistic Dog and Cat Varieties </li>
+					<h4 style="color: darkgreen;">{{ featured_item.title }}</h4>
+					{% if featured_item.items %}
+					<ul style="padding-left: 0; list-style-type: none;">
+					{% for item in featured_item.items %}
+						{% if item.title %}
+						<li>- {{ item.title }}
+							{% if item.subitems %}
+							<ul style="list-style-type: none;">
+								{% for subitem in item.subitems %}
+								<li>- {{ subitem }}</li>
+								{% endfor %}
 							</ul>
+							{% endif %}
 						</li>
-						<li> - Fescue Hay </li>
-						<ul style="list-style-type:none;">
-							<li> - Grown by Carpenter Farm Supply</li>
-						</ul>
-						<li> - Horse Feed & Supplements</li>
-						<ul style="list-style-type:none;">
-							<li> - Pelletized and Textured </li>
-						</ul>
-						<li> - Bird Feed </li>
-						<li> - Deer Corn </li>
-						<li> - Chicken Feed </li>
-
+						{% else %}
+						<li>- {{ item }}</li>
+						{% endif %}
+					{% endfor %}
 					</ul>
+					{% endif %}
 				</div>
 			</div>
 		</div>
-
-		<div class="col-lg" style="padding-bottom:30px;">
-			<div class="card h-100">
-				<div class="card-body">
-					<h4 style="color:darkgreen">Garden</h4>
-
-					<ul style="list-style-type:none;padding-left:0;">
-						<li> - Seasonal Transplants from Bonnie Plants</li>
-						<li> - Large Variety of Seeds</li>
-						<li> - Potting Soil</li>
-						<li> - Fertilizers</li>
-						<li> - Gardening Tools</li>
-					</ul>
-
-				</div>
-			</div>
-		</div>
-		<div class="col-lg" style="padding-bottom:30px;">
-			<div class="card h-100">
-				<div class="card-body">
-					<h4 style="color:darkgreen">Lawncare</h4>
-
-					<ul style="list-style-type:none;padding-left:0;">
-						<li> - Will sharpen mower blades!</li>
-						<li> - Variety of Grass Seeds (Large & Small Bags)</li>
-						<li> - Fertlizers</li>
-						<li> - Weed & Feed</li>
-						<li> - Ant Killer</li>
-						<li> - Snake Away</li>
-						<li> - Watering Systems </li>
-						<ul style="list-style-type:none;">
-							<li> - Hoses & Accessories</li>
-							<li> - Sprinklers </li>
-						</ul>
-						<li> - Yard Tools</li>
-						<ul style="list-style-type:none;">
-							<li> - Shovels & Rakes</li>
-							<li> - Rakes </li>
-						</ul>
-
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row" style="margin-top:30px;">
-		<div class="col-lg" style="padding-bottom:30px;">
-			<div class="card h-100">
-				<div class="card-body">
-					<h4 style="color:darkgreen">Farm Supplies</h4>
-
-					<ul style="list-style-type:none;padding-left:0;">
-						<li> - Fertilizers</li>
-						<li> - Lime</li>
-						<li> - Crop </li>
-						<li> - Tractor Tires, Parts, and Services</li>
-						<li> - Gates</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="col-lg" style="padding-bottom:30px;">
-			<div class="card h-100">
-				<div class="card-body">
-					<h4 style="color:darkgreen">Household Items</h4>
-
-					<ul style="list-style-type:none;padding-left:0;">
-						<li> - Household Cleaner</li>
-						<li> - Gorilla Tape Varieties</li>
-						<li> - Frog Tape for Painters</li>
-						<li> - LED & Flouresent Light Bulbs</li>
-						<li> - Electrical </li>
-						<ul style="list-style-type:none;">
-							<li> - Outlets & Receptacles</li>
-							<li> - Light Switches</li>
-							<li> - Extension Cords</li>
-						</ul>
-						<li> - Air Filters</li>
-						<li> - Liquid Propane </li>
-						<li> - Flashlights </li>
-						<li> - Master Locks </li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-
-		<div class="col-lg" style="padding-bottom:30px;">
-			<div class="card h-100">
-				<div class="card-body">
-					<h4 style="color:darkgreen">Hardware</h4>
-
-					<ul style="list-style-type:none;padding-left:0;">
-						<li> - Metric & Standard Options</li>
-						<li> - Different Hardware Grades Available</li>
-						<li> - Nuts, Bolts, & Washers</li>
-						<li> - Variety of Screws & Nails</li>
-						<li> - Door Handles, Hinges, and Stops </li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row" style="margin-top:30px;">
-		<div class="col-lg" style="padding-bottom:30px;">
-			<div class="card h-100">
-				<div class="card-body">
-					<h4 style="color:darkgreen">Tools</h4>
-
-					<ul style="list-style-type:none;padding-left:0;">
-						<li> - 1/4", 3/8", 1/2" Ratchets & Sockets</li>
-						<li> - Various Wrenches and Wrench Sets </li>
-						<li> - Phillips & Flat Head Screwdrivers</li>
-						<li> - Hammers & Mallets</li>
-						<li> - Vise Grips </li>
-						<li> - Channel Locks </li>
-						<li> - Hand Saws & Blade Replacements</li>
-						<li> - Drill Bits</li>
-						<li> - Tape Measure </li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="col-lg" style="padding-bottom:30px;">
-			<div class="card h-100">
-				<div class="card-body">
-					<h4 style="color:darkgreen">Snacks & Drinks</h4>
-
-					<ul style="list-style-type:none;padding-left:0;">
-						<li> - Old Fashioned Glass Coca-Cola, Diet Coke, and Sprite</li>
-						<li> - Canned & Bottled Coca-Cola Products</li>
-						<li> - Smart Water</li>
-						<li> - Dasani Water</li>
-						<li> - Monster Energy Drinks</li>
-						<li> - Lance Snacks</li>
-						<li> - Houston Peanuts</li>
-						<li> - Raw Peanuts</li>
-						<li> - Twinkies</li>
-						<li> - Oatmeal Creme Pies </li>
-						<li> - Honey Buns</li>
-
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+	{% comment %}
+	If we on the last element, close the row div.
+	{% endcomment %}
+	{% if row == 2 or forloop.last %}</div>{% endif %}
+	{% endfor %}
+</div>
