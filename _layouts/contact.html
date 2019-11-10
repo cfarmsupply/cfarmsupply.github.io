@@ -1,0 +1,57 @@
+---
+layout: default
+---
+<div class="container">
+	<h1>Contact Details</h1>
+
+	<div class="row">
+		<div class="col-md">
+			<div class="mapouter">
+				<div class="gmap_canvas">
+					<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=1933%20morrisville%20carpenter%20rd&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+				</div>
+				<style>
+					.mapouter {
+						position:relative;
+						text-align:right;
+						width: 100%;
+						padding-top: 84%;
+					}
+
+					.gmap_canvas {
+						overflow:hidden;
+						background:none!important;
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+					}
+				</style>
+			</div>
+		</div>
+
+		<div class="col-md">
+			<p>
+				<h3>Additional Contact Information:</h3>
+				<br />
+				1933 Morrisville Carpenter Rd <br />
+				Cary, NC 27519
+				<br />
+				<br />
+				Phone: <a href="tel:9194671511">(919) 467-1511</a>
+				<br />
+				Email:<a href="mailto:{{site.email}}">{{site.email}}</a>
+			</p>
+			<p>
+				<h3>Store Hours:</h3>
+				Monday - Friday: 8:00AM to 5:00PM <br />
+				Saturday: 8:00AM to 3:00PM <br />
+				Closed Sunday
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		{{ content }}
+	</div>
+</div>

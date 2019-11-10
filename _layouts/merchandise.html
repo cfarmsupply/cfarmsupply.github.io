@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div class="container">
+    <div>
+    {% if site.data.merchandise.size == 0 %}
+        Pending product information in merchandise.csv...
+    {% endif %}
+    {% for item in site.data.merchandise %}
+        <div>
+            {{ item.product_name }}
+        </div>
+    {% endfor %}
+    </div>
+    <div>
+        {{ content }}
+    </div>
+</div>
